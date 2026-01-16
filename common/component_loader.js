@@ -1,4 +1,4 @@
-// ÄÄÆ÷³ÍÆ®¸¦ ºÒ·¯¿À´Â ÇÕ¼ö
+// ì»´í¬ë„ŒíŠ¸ë¥¼ ë¶ˆëŸ¬ì˜¤ëŠ” í•©ìˆ˜
 async function loadComponent(id, url){
     try{
         const response = await fetch(url);
@@ -6,11 +6,11 @@ async function loadComponent(id, url){
         document.getElementById(id).innerHTML = data;
 
     } catch(error){
-        console.error(`ÄÄÆ÷³ÍÆ® ·Îµå ½ÇÆĞ (${url}):`, error);
+        console.error(`ì»´í¬ë„ŒíŠ¸ ë¡œë“œ ì‹¤íŒ¨ (${url}):`, error);
     }
 }
 
-// ¸ğ´Ş ¹× ¸Ş´º Á¦¾î ÇÔ¼ö (Àü¿ª window °´Ã¼¿¡ µî·Ï) 
+// ëª¨ë‹¬ ë° ë©”ë‰´ ì œì–´ í•¨ìˆ˜ (ì „ì—­ window ê°ì²´ì— ë“±ë¡) 
 window.toggleModal = function(show){
     const modal = document.getElementById('contactModal');
     if (modal) {
@@ -19,32 +19,32 @@ window.toggleModal = function(show){
 
 };
 
-// ¸ğµç ÄÄÆ÷³ÍÆ® ·Îµå ÈÄ ¼³Á¤
+// ëª¨ë“  ì»´í¬ë„ŒíŠ¸ ë¡œë“œ í›„ ì„¤ì •
 async function initLayout(){
-    await loadComponent('header_component', '../common/components/header_template.html');
-    await loadComponent('footer_component', '../common/components/footer-template.html');
-    await loadComponent('modal_component', '../common/components/modal_template.html');
+    await loadComponent('header_component', './common/components/header_template.html');
+    await loadComponent('footer_component', './common/components/footer-template.html');
+    await loadComponent('modal_component', './common/components/modal_template.html');
 
-    // Çì´õ ·Îµå ÈÄ ¸ğ¹ÙÀÏ ¸Ş´º ÀÌº¥Æ® Àç¿¬°á ÇÊ¿ä 
-    // Çì´õ ½ºÅ©·Ñ Á¦¾î
+    // í—¤ë” ë¡œë“œ í›„ ëª¨ë°”ì¼ ë©”ë‰´ ì´ë²¤íŠ¸ ì¬ì—°ê²° í•„ìš” 
+    // í—¤ë” ìŠ¤í¬ë¡¤ ì œì–´
 let lastScrollTop = 0;
 let scrollTimeout;
 const header = document.querySelector('header');
 const btn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu'); // ÇÜ¹ö°Å ¸Ş´º ¿µ¿ª
+const menu = document.getElementById('menu'); // í–„ë²„ê±° ë©”ë‰´ ì˜ì—­
 
 btn.addEventListener('click', () => {
-    // È°¼ºÈ­ Å¬·¡½º Åä±Û
+    // í™œì„±í™” í´ë˜ìŠ¤ í† ê¸€
     menu.classList.toggle('menu-active');
     
-    // ¾Ö´Ï¸ŞÀÌ¼ÇÀÌ ÁøÇàµÇ´Â µ¿¾È body paddingÀ» ½Ç½Ã°£À¸·Î ¸ÂÃß±â À§ÇØ 
-    // ¾à°£ÀÇ ½Ã°£Â÷¸¦ µÎ°í ¿©·¯ ¹ø °è»êÇÏ°Å³ª, transitionend ÀÌº¥Æ®¸¦ »ç¿ëÇÕ´Ï´Ù.
+    // ì• ë‹ˆë©”ì´ì…˜ì´ ì§„í–‰ë˜ëŠ” ë™ì•ˆ body paddingì„ ì‹¤ì‹œê°„ìœ¼ë¡œ ë§ì¶”ê¸° ìœ„í•´ 
+    // ì•½ê°„ì˜ ì‹œê°„ì°¨ë¥¼ ë‘ê³  ì—¬ëŸ¬ ë²ˆ ê³„ì‚°í•˜ê±°ë‚˜, transitionend ì´ë²¤íŠ¸ë¥¼ ì‚¬ìš©í•©ë‹ˆë‹¤.
     const updateInterval = setInterval(updateBodyPadding, 10);
-    setTimeout(() => clearInterval(updateInterval), 500); // ¾Ö´Ï¸ŞÀÌ¼Ç ½Ã°£(0.5ÃÊ) ÈÄ Áß´Ü
+    setTimeout(() => clearInterval(updateInterval), 500); // ì• ë‹ˆë©”ì´ì…˜ ì‹œê°„(0.5ì´ˆ) í›„ ì¤‘ë‹¨
 });
 
 function handleHeaderScroll() {
-    // ÇÜ¹ö°Å ¸Ş´º°¡ ¿­·ÁÀÖ´ÂÁö È®ÀÎ (TailwindÀÇ 'hidden' Å¬·¡½º ¿©ºÎ·Î ÆÇ´Ü)
+    // í–„ë²„ê±° ë©”ë‰´ê°€ ì—´ë ¤ìˆëŠ”ì§€ í™•ì¸ (Tailwindì˜ 'hidden' í´ë˜ìŠ¤ ì—¬ë¶€ë¡œ íŒë‹¨)
     const isMenuOpen = menu.classList.contains('menu-active');
     if (isMenuOpen) {
         header.classList.remove('header-hidden');
@@ -54,10 +54,10 @@ function handleHeaderScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
     if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // ¾Æ·¡·Î ½ºÅ©·Ñ Áß
+        // ì•„ë˜ë¡œ ìŠ¤í¬ë¡¤ ì¤‘
         header.classList.add('header-hidden');
     } else {
-        // À§·Î ½ºÅ©·Ñ Áß
+        // ìœ„ë¡œ ìŠ¤í¬ë¡¤ ì¤‘
         header.classList.remove('header-hidden');
     }
 
@@ -71,21 +71,22 @@ function handleHeaderScroll() {
 
 function updateBodyPadding() {
     if (header) {
-        // header¸¦ fixed·Î ¸¸µé¾úÀ¸¹Ç·Î, ±× ³ôÀÌ¸¸Å­ body¸¦ ¹Ğ¾îÁİ´Ï´Ù.
+        // headerë¥¼ fixedë¡œ ë§Œë“¤ì—ˆìœ¼ë¯€ë¡œ, ê·¸ ë†’ì´ë§Œí¼ bodyë¥¼ ë°€ì–´ì¤ë‹ˆë‹¤.
         const headerHeight = header.offsetHeight;
         document.body.style.paddingTop = headerHeight + 'px';
     }
 }
 
-// ÃÊ±â ½ÇÇà ¹× ÀÌº¥Æ® µî·Ï
+// ì´ˆê¸° ì‹¤í–‰ ë° ì´ë²¤íŠ¸ ë“±ë¡
 window.addEventListener('load', () => {
     updateBodyPadding();
     window.addEventListener('scroll', handleHeaderScroll, { passive: true });
 });
 
-// ¸®»çÀÌÁî ½Ã ÆĞµù Àç°è»ê (¸Ş´º°¡ ÆîÃÄÁö¸ç ³ôÀÌ°¡ º¯ÇÒ ¶§ ´ëÀÀ)
+// ë¦¬ì‚¬ì´ì¦ˆ ì‹œ íŒ¨ë”© ì¬ê³„ì‚° (ë©”ë‰´ê°€ í¼ì³ì§€ë©° ë†’ì´ê°€ ë³€í•  ë•Œ ëŒ€ì‘)
 window.addEventListener('resize', updateBodyPadding);
 }
 
 initLayout();
+
 
