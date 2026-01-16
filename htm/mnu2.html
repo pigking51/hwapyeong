@@ -1,0 +1,420 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ko">
+  <head>
+    <title>:::::: 화평특허법률사무소 ::::;</title>
+    <!-- <meta charset="UTF-8"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../common/user.css" rel="stylesheet" type="text/css" />
+    <script src="../common/commomfc.js" defer></script>
+  </head>
+  <body class="bg-[#EDEEE9] min-h-screen relative">
+    <!-- 모달버튼 시작 -->
+    <div class="fixed bottom-10 right-10 z-[100]">
+      <button
+        onclick="toggleModal(true)"
+        class="bg-blue-600 hover:bg-blue-700 text-white p-4 rounded-full shadow-2xl transition-transform hover:scale-110"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-8 w-8"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
+        </svg>
+      </button>
+    </div>
+    <!-- 모달버튼 끝 -->
+
+    <!-- header 시작 -->
+    <div id="header_component"></div>
+    <!-- header 끝 -->
+
+    <!-- 본문 시작 -->
+    <div class="relative w-full h-[250px] md:h-[300px] overflow-hidden">
+      <div
+        class="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style="background-image: url('../img/sub_back.png')"
+      ></div>
+      <div
+        class="absolute inset-0 bg-slate-900/40 flex flex-col items-center justify-center"
+      >
+        <h2 class="text-white text-3xl md:text-5xl font-bold drop-shadow-md">
+          지식재산권 제도
+        </h2>
+      </div>
+    </div>
+
+    <main class="container mx-auto px-4 max-w-5xl relative z-20 -mt-12 pb-24">
+      <section
+        class="bg-white rounded-[2rem] shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100"
+      >
+        <div
+          class="bg-slate-50/50 px-6 py-4 border-b border-slate-100 flex justify-end items-center text-xs text-slate-500"
+        >
+          <img src="../img/blit_01.gif" class="inline-block mr-2 opacity-60" />
+          <a href="/index.html" class="hover:text-blue-600 transition">Home</a>
+          <span class="mx-2 text-slate-300">/</span> 지식재산권제도
+        </div>
+
+        <div class="p-6 md:p-12">
+          <div class="mb-12">
+            <img
+              src="../img/company/title_02.gif"
+              alt="Title"
+              class="max-w-full h-auto"
+            />
+          </div>
+
+          <div
+            class="flex flex-wrap gap-3 mb-12 border-b border-slate-100 pb-6"
+          >
+            <button
+              onclick="showTab('patent')"
+              id="btn-patent"
+              class="tab-btn active px-8 py-3 rounded-full font-bold transition-all duration-300 shadow-sm"
+            >
+              특허권
+            </button>
+            <button
+              onclick="showTab('design')"
+              id="btn-design"
+              class="tab-btn inactive px-8 py-3 rounded-full font-bold transition-all duration-300 hover:bg-slate-50"
+            >
+              상표·디자인권
+            </button>
+          </div>
+
+          <div id="tab-patent" class="tab-content active space-y-16">
+            <section>
+              <div class="flex items-center gap-4 mb-8">
+                <img src="../img/best_title_01.gif" alt="특허권이란" />
+                <div class="flex-1 h-[1px] bg-slate-100"></div>
+              </div>
+
+              <div
+                class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden"
+              >
+                <div
+                  class="p-4 bg-white border-b border-slate-100 flex items-center justify-between"
+                  style="
+                    background-image: url('../img/detail_bg.gif');
+                    background-position: right;
+                    background-repeat: no-repeat;
+                  "
+                >
+                  <img src="../img/detail_ti04.gif" alt="특허권 정의" />
+                </div>
+                <div
+                  class="p-8 text-slate-700 leading-relaxed space-y-5 break-keep"
+                >
+                  <p>
+                    특허는 출원건에 대해 특허청이 발행하는 문서로서, 발명을
+                    기술하고 특허된 발명이 특허권자의 위임하에서만
+                    <span
+                      class="text-blue-600 font-semibold underline decoration-blue-200 underline-offset-4"
+                      >실시(생산, 사용, 판매, 수입 등)</span
+                    >될 수 있도록 조성된 법적 환경이라 할 수 있다. '발명'이란
+                    기술분야에서 특정 문제점의 해결책을 의미하는 것으로, 물건과
+                    방법발명으로 분류된다.
+                  </p>
+                  <p>
+                    발명은 만약 그것이 신규하고, 진보성을 갖고 있으며, 산업상
+                    이용 가능하면 특허 받을 수 있으며, 특허에 의해 부여된 보호는
+                    기한이 한정되어 있다<span class="text-blue-600 font-bold"
+                      >(출원일로부터 20년)</span
+                    >.
+                  </p>
+                  <p
+                    class="pt-4 border-t border-slate-200 italic text-slate-600"
+                  >
+                    다시 말해 특허는 다른 사람들이 발명의 이익을 얻을 수 있도록
+                    발명을 공개하는 대가로 일정기간동안 발명자가 정부로부터
+                    부여받는 독점권이라 할 수 있다.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <div class="flex items-center gap-4 mb-8">
+                <img src="../img/detail_ti05.gif" alt="등록 요건" />
+                <div class="flex-1 h-[1px] bg-slate-100"></div>
+              </div>
+
+              <div class="grid grid-cols-1 gap-8">
+                <div
+                  class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm"
+                >
+                  <h4
+                    class="text-blue-600 font-bold text-lg mb-4 flex items-center gap-2"
+                  >
+                    <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    산업상 이용가능성
+                  </h4>
+                  <p class="text-slate-700 leading-relaxed break-keep">
+                    발명은 특허받을 수 있기 위해서는 실질적인 목적에 적용될 수
+                    있는 것이라야 한다. 다시 말해 순전히 이론적인 것이 아니라
+                    실질적으로 시행될 수 있는 발명이라야 특허를 받을 수 있다는
+                    것이다. 즉, 발명의 산업상 이용가능성은 기술적 수단에 의해
+                    이용(제조 또는 사용)될 수 있어야 한다는 의미이다.
+                  </p>
+                </div>
+
+                <div
+                  class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm"
+                >
+                  <h4
+                    class="text-blue-600 font-bold text-lg mb-4 flex items-center gap-2"
+                  >
+                    <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    신규성
+                  </h4>
+                  <p class="text-slate-700 leading-relaxed break-keep">
+                    발명은 특허출원전의 당해 출원일 또는 우선일보다 먼저
+                    국내외에 존재하는 모든 지식인 선행기술과 동일하지 않아야
+                    특허받을 수 있다. <br /><br />
+                    여기서 선행기술은 국내외의 간행물에 기재되어
+                    불특정다수인에게 공개되어 있는 기술과 국내에서 공연히 실시된
+                    기술을 의미하는 것으로, 이들과 동일하지 않아야 신규성이 있는
+                    발명이라고 판단하게 된다.
+                  </p>
+                </div>
+
+                <div
+                  class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm"
+                >
+                  <h4
+                    class="text-blue-600 font-bold text-lg mb-4 flex items-center gap-2"
+                  >
+                    <span class="w-2 h-2 bg-blue-600 rounded-full"></span>
+                    진보성
+                  </h4>
+                  <p class="text-slate-700 leading-relaxed break-keep">
+                    특허법은 제29조 1항에서 신규성에 관하여 규정하면서 동조
+                    2항에서 신규성 있는 발명이라 하더라도 특허출원전에 그 발명이
+                    속하는 기술분야에서 통상의 지식을 가진자가 공지, 공용,
+                    간행물기재의 기술로부터 용이하게 발명할 수 있는 것인 때에는
+                    특허를 받을 수 없는 것으로 규정하고 있다. <br /><br />
+                    즉, 특허요건 중의 진보성은 선행기술에 공개된 기술과는
+                    틀리다는 것만으로는 부족하고 해결하고자 하는 과제와 이
+                    과제의 해결책 및 해결책에 의한 효과를 종합적으로 비교
+                    판단하여 한층 뛰어난 기술이어야 특허받을 수 있다는 의미이다.
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <div id="tab-design" class="tab-content hidden space-y-16">
+            <section class="space-y-8">
+              <div class="flex items-center gap-4">
+                <img src="../img/best_title_03.gif" alt="상표권이란" />
+                <div class="flex-1 h-[1px] bg-slate-100"></div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  class="p-8 bg-slate-50 rounded-2xl border border-slate-100"
+                >
+                  <img
+                    src="../img/detail_ti09.gif"
+                    alt="상표권의 개요"
+                    class="mb-4"
+                  />
+                  <p class="text-slate-700 leading-relaxed break-keep">
+                    상표는 어느 기업의 상품을 개성화하고 경업자의 상품들과
+                    구별시키는 표지로서, 소비자들로 하여금 다양한 상품들에 대한
+                    선택을 가능하게 하며, 이를 상표법으로 보호하고 있다.
+                  </p>
+                </div>
+                <div
+                  class="p-8 bg-slate-50 rounded-2xl border border-slate-100"
+                >
+                  <img
+                    src="../img/detail_ti10.gif"
+                    alt="서비스표의 개요"
+                    class="mb-4"
+                  />
+                  <p class="text-slate-700 leading-relaxed break-keep">
+                    서비스를 제공하는 기업체 등에 있어서 수요자로 하여금 구별케
+                    할 수 있는 표장을 서비스표라하는데, 근본적으로 상표와 같이
+                    출처표시 및 구별기능을 하는 것이다. 상표법은 상표와 같은
+                    방식으로 서비스표를 보호하고 있다.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm"
+              >
+                <img
+                  src="../img/detail_ti11.gif"
+                  alt="단체표장과 업무표장"
+                  class="mb-6"
+                />
+                <div
+                  class="text-slate-700 leading-relaxed space-y-4 break-keep"
+                >
+                  <p>
+                    단체표장은 관련되는 업종에 속하는 단체원이 설립한 법인이
+                    상표를 소유하고 단체원에게 사용하게 하는 것을 말한다.
+                    단체표장의 기능은 일반에게 그 표장이 사용되어지는 제품의
+                    일정특질에 관하여 알려주는 것이다. 단체표장을 사용할 수 있는
+                    기업도 또한 추가적으로 자신의 상표를 사용할 수 있다.
+                  </p>
+                  <p>
+                    단체표장의 사용에 관한 정관은 단체표장등록출원서에 통상
+                    포함되어야 하고 정관변경사항은 특허청에 통보되어야 한다.
+                    업무표장은 비영리업무를 영위하는 자의 업무를 표상하기 위하여
+                    사용하는 표장을 말한다.
+                  </p>
+                </div>
+              </div>
+
+              <div class="p-8 bg-blue-50/50 border border-blue-100 rounded-2xl">
+                <img
+                  src="../img/detail_ti12.gif"
+                  alt="상표의 구성"
+                  class="mb-6"
+                />
+                <p class="text-slate-700 leading-relaxed break-keep">
+                  이와 같은 표장중에서 물리적으로 등록이 되고 공고가 가능할 수
+                  있어야 하기 때문에 평면적으로 표현 가능한 표장의 등록만을
+                  허용하고 있다. 입체표장은 그림, 사진 또는 인쇄가능한 다른
+                  표현으로서 입체적 표장의 평면적 표현 또는 설명서를 출원시에
+                  제출토록하여 등록받을 수 있도록 하고 있다. 아직 소리표장과
+                  냄새표장은 국내에서 등록받을 수 없다.
+                </p>
+                <p
+                  class="mt-6 font-bold text-blue-700 border-t border-blue-200 pt-4"
+                >
+                  상표권의 존속기간은 10년이나 상표권자의 의사에 따라 계속적인
+                  갱신이 가능하다.
+                </p>
+              </div>
+            </section>
+
+            <section class="space-y-8">
+              <div class="flex items-center gap-4">
+                <img src="../img/best_title_04.gif" alt="디자인권이란" />
+                <div class="flex-1 h-[1px] bg-slate-100"></div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6">
+                <div
+                  class="p-8 bg-slate-50 rounded-2xl border border-slate-100"
+                >
+                  <img
+                    src="../img/detail_ti13.gif"
+                    alt="디자인권의 개요"
+                    class="mb-4"
+                  />
+                  <p class="text-slate-700 leading-relaxed">
+                    디자인이란 물품의 형상·모양·색채 또는 이들을 결합한 것으로서
+                    시각을 통하여 미감을 일으키게 하는 것을 말합니다.
+                  </p>
+                </div>
+                <div
+                  class="p-8 bg-slate-50 rounded-2xl border border-slate-100"
+                >
+                  <img
+                    src="../img/detail_ti15.gif"
+                    alt="디자인 등록 요건"
+                    class="mb-4"
+                  />
+                  <p class="text-slate-700 leading-relaxed">
+                    디자인이 특허청에 의해 권리를 부여받기 위해서는 디자인으로서
+                    성립하여야 하고, 공업적으로 대량생산가능한 물품에 화체된
+                    디자인이어야 하며, 신규성과 창작성을 가져야 한다.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="p-8 bg-white border border-slate-200 rounded-2xl shadow-sm"
+              >
+                <img
+                  src="../img/detail_ti14.gif"
+                  alt="디자인권의 설정"
+                  class="mb-6"
+                />
+                <p class="text-slate-700 leading-relaxed mb-6">
+                  디자인을 타인이 실시하는 것을 금지하는 권리는 다음을 포함한다.
+                </p>
+                <ul class="space-y-3 mb-8">
+                  <li class="flex items-center gap-3 text-slate-600">
+                    <span class="text-blue-500">✓</span> 그 디자인이 적용 또는
+                    체화된 물품을 제조하는 행위
+                  </li>
+                  <li class="flex items-center gap-3 text-slate-600">
+                    <span class="text-blue-500">✓</span> 그 디자인이 적용 또는
+                    체화된 물품을 수입하는 행위
+                  </li>
+                  <li class="flex items-center gap-3 text-slate-600">
+                    <span class="text-blue-500">✓</span> 이러한 디자인을 판매,
+                    임대 또는 판매청약하는 행위
+                  </li>
+                </ul>
+                <p
+                  class="font-bold text-slate-900 border-t border-slate-100 pt-6"
+                >
+                  디자인의 권리존속기간은 등록일로부터 15년이다.
+                </p>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div
+          class="h-2 bg-gradient-to-r from-blue-600 to-indigo-600 w-full"
+        ></div>
+      </section>
+    </main>
+    <!-- 본문 끝 -->
+
+    <!-- 문의 모달 시작 -->
+    <div id="modal_component"></div>
+    <!-- 문의 모달 끝 -->
+
+    <!-- footer 시작 -->
+    <div id="footer_component"></div>
+    <!-- footer 끝 -->
+
+    <script src="../common/component_loader.js"></script>
+    <script>
+      function showTab(tabId) {
+        // 모든 컨텐츠 숨기기
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((content) => content.classList.add("hidden"));
+        document
+          .querySelectorAll(".tab-content")
+          .forEach((content) => content.classList.remove("active"));
+
+        // 모든 버튼 비활성화
+        document.querySelectorAll(".tab-btn").forEach((btn) => {
+          btn.classList.add("inactive");
+          btn.classList.remove("active", "bg-blue-600", "text-white");
+        });
+
+        // 선택한 탭 보이기
+        const activeTab = document.getElementById("tab-" + tabId);
+        activeTab.classList.remove("hidden");
+        activeTab.classList.add("active");
+
+        // 선택한 버튼 활성화
+        const activeBtn = document.getElementById("btn-" + tabId);
+        activeBtn.classList.remove("inactive");
+        activeBtn.classList.add("active");
+      }
+    </script>
+  </body>
+</html>

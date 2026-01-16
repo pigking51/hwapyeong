@@ -1,0 +1,50 @@
+<!-- <div id="contactModal" class="fixed inset-0 z-[110] hidden bg-black bg-opacity-50 flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl">
+        <h3 class="text-xl font-bold mb-4">문의전화 및 메일</h3>
+        <p class="text-gray-600 mb-2">Tel: 042-487-2960</p>
+        <p class="text-gray-600 mb-6">Email: hp_patent@naver.com</p>
+        <button onclick="toggleModal(false)" class="w-full py-2 bg-gray-800 text-white rounded-lg">닫기</button>
+    </div>
+</div> -->
+
+<div
+  id="contactModal"
+  class="fixed inset-0 z-[110] hidden bg-black bg-opacity-50 flex items-center justify-center p-4"
+>
+  <div class="bg-white rounded-2xl max-w-sm w-full p-6 shadow-2xl">
+    <div class="flex justify-between items-center mb-4">
+      <h3 class="text-xl font-bold text-gray-800">문의하기</h3>
+      <button
+        onclick="toggleModal(false)"
+        class="text-gray-400 hover:text-gray-600"
+      >
+        &times;
+      </button>
+    </div>
+    <div class="space-y-4">
+      <a
+        href="tel:042-487-2960"
+        class="flex items-center p-4 bg-blue-50 rounded-xl hover:bg-blue-100 transition"
+      >
+        <span class="text-blue-600 mr-3">?</span>
+        <div>
+          <p class="text-xs text-gray-500">전화문의</p>
+          <p class="font-bold text-gray-800">042-487-2960</p>
+        </div>
+      </a>
+      <div class="flex items-center p-4 bg-green-50 rounded-xl">
+        <span class="text-green-600 mr-3">??</span>
+        <div>
+          <p class="text-xs text-gray-500">이메일</p>
+          <p class="font-bold text-gray-800">hp_patent@naver.com</p>
+        </div>
+      </div>
+    </div>
+    <button
+      onclick="toggleModal(false)"
+      class="w-full mt-6 py-3 bg-gray-100 text-gray-600 rounded-xl font-medium"
+    >
+      닫기
+    </button>
+  </div>
+</div>

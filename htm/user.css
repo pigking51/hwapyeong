@@ -1,0 +1,141 @@
+TD {FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none}
+TD A {FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none}
+TD A:hover {COLOR: #ff6600; TEXT-DECORATION: none}
+.box01 {FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none; border: 1px solid #DDDDDD;}
+.box02 {FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none; border: 1px solid #E2E2DC; }
+.LINE-HEIGHT13pt {FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 13pt; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none}
+.LINE-HEIGHT13pt A {FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 13pt; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none}
+.LINE-HEIGHT13pt A:hover {COLOR: #ff6600; TEXT-DECORATION: none}
+.red {FONT-SIZE: 12px; COLOR: #ff6600; FONT-FAMILY: µ¸¿ò}
+.red A {FONT-SIZE: 12px; COLOR: #ff6600; FONT-FAMILY: µ¸¿ò}
+.red A:hover {COLOR: #ff6600; TEXT-DECORATION: none}
+.hight13 {FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 13pt; TEXT-DECORATION: none}
+.hight15 {FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 15pt; TEXT-DECORATION: none}
+.hight20 {FONT-SIZE: 12px; COLOR: #666666; LINE-HEIGHT: 20pt; TEXT-DECORATION: none}
+.bold {
+	FONT-SIZE: 12px;
+	COLOR: #666666;
+	FONT-FAMILY: "µ¸¿ò";
+	font-weight: bold;
+: none; font-weight: bold}
+.bold A {FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "µ¸¿ò" TEXT-DECORATION: none; font-weight: bold}
+.bold A:hover {COLOR: #ff0000; TEXT-DECORATION: none}
+.white-bold {FONT-SIZE: 12px; COLOR: #FFFFFF; TEXT-DECORATION: none; 	font-weight: bold; }
+.box03  {
+	FONT-SIZE: 12px;
+	COLOR: #666666;
+	FONT-FAMILY: "µ¸¿ò";
+	TEXT-DECORATION: none;
+	border: 1px solid #D4D0C8;
+	scrollbar-face-color: '#D4D0C8';
+	scrollbar-3dlight-color: '#D4D0C8';
+	scrollbar-darkshadow-color: '#D4D0C8';
+	scrollbar-track-color: '#D4D0C8';
+	scrollbar-arrow-color: '#D4D0C8';
+	background-color: #F4F4F1;
+} 
+.top {
+	FONT-SIZE: 11px;
+	COLOR: #666666;
+	TEXT-DECORATION: none;
+	font-family: "µ¸¿ò";
+}
+.boldred {
+	FONT-SIZE: 12px;
+	COLOR: #FF7200;
+	FONT-FAMILY: "µ¸¿ò";
+	font-weight: bold;
+}
+.box02 {
+FONT-SIZE: 12px; COLOR: #666666; FONT-FAMILY: "µ¸¿ò"; TEXT-DECORATION: none; border: 1px solid #DDDDDD;
+}
+.11 {
+FONT-SIZE: 11px; COLOR: #666666; LINE-HEIGHT: 13pt; TEXT-DECORATION: none
+}
+.dir {FONT-SIZE: 11px; COLOR: #666666; TEXT-DECORATION: none;}
+.dir A:{FONT-SIZE: 11px; COLOR: #666666; TEXT-DECORATION: none;}
+.dir A:hover {FONT-SIZE: 11px; COLOR: #ff6600; TEXT-DECORATION: none}
+.bluebold {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	font-weight: bold;
+	color: #2F8DB4;
+	text-decoration: none;
+}
+.greenbold {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	font-weight: bold;
+	color: #51A79F;
+	text-decoration: none;
+}
+.purplebold {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	font-weight: bold;
+	color: #A382B6;
+	text-decoration: none;
+}
+.bg {
+	text-decoration: none;
+	background-image:  url(../../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/img/bg_01.jpg);
+	background-repeat: repeat-x;
+}
+.bg_left {
+	text-decoration: none;
+	background-image:   url(../../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/img/bg_left_01.gif);
+	background-repeat: repeat-y;
+	background-position: left;
+}
+.blue {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	font-weight: normal;
+	color: #569ED0;
+	text-decoration: none;
+}
+.wfull {
+	BORDER-RIGHT: #afafaf 1px solid; BORDER-TOP: #afafaf 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #afafaf 1px solid; WIDTH: 95%; COLOR: #555555; BORDER-BOTTOM: #afafaf 1px solid; FONT-FAMILY: "dotum"; HEIGHT: 18px; BACKGROUND-COLOR: #ffffff
+}
+.bluebold2 {
+	font-family: "µ¸¿ò";
+	font-size: 13px;
+	font-weight: bold;
+	color: #2F8DB4;
+	text-decoration: none;
+}
+.bg01 {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	font-weight: bold;
+	color: 9DA921;
+	background-image:  url(../../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/img/goods/package_bg01.gif);
+	background-repeat: repeat-x;
+	padding-top:5px;
+}
+.bg02 {font-family: "µ¸¿ò";font-size: 12px;font-weight: bold;color: 8C8C8C;background-image:  url(../../../Local%20Settings/Temporary%20Internet%20Files/Content.IE5/img/goods/package_bg02.gif);background-repeat: repeat-x;}
+.bg02  A {font-family: "µ¸¿ò";font-size: 12px;font-weight: bold;color: 8C8C8C;}
+.bg02  A:hover {COLOR: 9DA921; TEXT-DECORATION: none}
+.graybold {
+	font-family: "µ¸¿ò";
+	font-size: 12px;
+	font-weight: bold;
+	color: #999999;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.bluebold3 {
+	font-family: "µ¸¿ò";
+	font-size: 13px;
+	font-weight: bold;
+	color: #354DAD;
+	text-decoration: none;
+}
+
+
+.menu_name {float:left; padding:17px 17px 12px 18px; background:#8d8d8d; color:#fff; line-height:15px; font-family: "µ¸¿ò"; font-weight:bold;}
+.menu_name a {color:#fff;}
+.menu_name a:hover {color:#fcff00;}
+.menu_name_on {background:#282828;}

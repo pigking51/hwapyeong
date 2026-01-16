@@ -1,0 +1,119 @@
+/* 기존 스타일 유지 + 아래 Tailwind로 커스텀된 컴포넌트 스타일의 예시만 추가 */
+
+/* 헤더, 메뉴, 레이아웃 등은 Tailwind 유틸리티 클래스만 적용함 (권장) */
+
+/* 메뉴 스타일 백업 (선택적) */
+.menu_name a {
+  color: #fff;
+}
+.menu_name a:hover {
+  color: #fcff00;
+}
+
+/* CSS에 추가 */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: transform 0.4s ease-in-out; /* 조금 더 부드러운 속도 */
+  will-change: transform; /* 성능 최적화 */
+}
+
+/* 헤더가 숨겨질 때 사용할 클래스 */
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+/* 메뉴가 활성화되었을 때 적용될 클래스 */
+#menu.menu-active {
+  opacity: 1 !important;
+  max-height: 500px !important; /* 메뉴 전체가 담길 만큼 충분한 높이 */
+  pointer-events: auto !important;
+}
+
+/* 폰트 설정: EUC-KR 환경 가독성 및 디자인 통일 */
+body {
+  font-family: "Pretendard", "Malgun Gothic", "dotum", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 메인화면 */
+/* 초기 상태: 아래로 30px 내려가 있고 투명함 */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* 활성화 상태: 제자리로 오고 선명해짐 */
+.reveal-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 필요하다면 추가적인 커스텀 임시 스타일만 아래 추가 */
+
+/* 탭 버튼 스타일 */
+.tab-btn.active {
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+}
+.tab-btn.inactive {
+  background-color: #f1f5f9; /* slate-100 */
+  color: #64748b; /* slate-500 */
+}
+.tab-content {
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+/* .tab-content { display: none; }
+.tab-content.active { display: block; }
+.tab-btn { cursor: pointer; transition: all 0.2s; } */
+/* 비활성 탭은 약간 투명하게 처리 */
+/* .tab-btn.inactive { opacity: 0.4; filter: grayscale(100%); } */
+
+/* 부드러운 전환을 위한 스타일 */
+/* .tab-content { display: none; } */
+/* .tab-content.active { display: block; } */
+/* .tab-btn { cursor: pointer; transition: opacity 0.3s; } */
+/* .tab-btn:hover { opacity: 0.8; } */
+
+/* 메뉴2-2부분 css */
+/* 이미지 롤오버를 위한 CSS (스크립트 대체) */
+.hover-img {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+.hover-img img.on {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.hover-img:hover img.on {
+  opacity: 1;
+}
+/* 기존 폰트 스타일 유지용 */
+.hight13 {
+  line-height: 1.6;
+  color: #444;
+  font-size: 14px;
+}
+
+/* 메뉴 6 iframe 관련 */
+/* 모바일에서만 가로 스크롤바가 보이고, PC에서는 깔끔하게 숨김 */
+@media (max-width: 768px) {
+  .invisible-scrollbar::-webkit-scrollbar {
+    height: 4px;
+  }
+  .invisible-scrollbar::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 10px;
+  }
+}
