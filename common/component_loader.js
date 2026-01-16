@@ -7,6 +7,10 @@ async function loadComponent(id, url, imagePath = './'){
         let data = await response.text();
 
         data = data.replace(/src="img\//g, `src="${imagePath}img/`);
+
+        data = data.replace(/href="(?!http|tel|mailto|#)([^"]+)"/g, (match, p1) => {
+            return `href="${basePath}${p1}"`;
+        });
         
         const element = document.getElementById(id);
         if(element) {
@@ -105,6 +109,7 @@ if (document.readyState === 'loading'){
 }else{
     initLayout();    
 }
+
 
 
 
