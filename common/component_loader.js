@@ -2,7 +2,7 @@
 async function loadComponent(id, url, imagePath = './'){
     try{
         const response = await fetch(url);
-        if (!response.ok) throw new Error(`HTTP error! status: ${reponse.status}`);
+        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
         let data = await response.text();
 
@@ -110,6 +110,7 @@ if (document.readyState === 'loading'){
 }else{
     initLayout();    
 }
+
 
 
 
