@@ -1,12 +1,12 @@
 // 컴포넌트를 불러오는 합수
-async function loadComponent(id, url, imagePath = './'){
+async function loadComponent(id, url, basePath = './'){
     try{
         const response = await fetch(url);
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
         
         let data = await response.text();
 
-        data = data.replace(/src="img\//g, `src="${imagePath}img/`);
+        data = data.replace(/src="img\//g, `src="${basePath}img/`);
 
         data = data.replace(/href="(?!http|tel|mailto|#)([^"]+)"/g, (match, p1) => {
             return `href="${basePath}${p1}"`;
@@ -110,6 +110,7 @@ if (document.readyState === 'loading'){
 }else{
     initLayout();    
 }
+
 
 
 
