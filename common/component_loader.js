@@ -1,9 +1,17 @@
 // 컴포넌트를 불러오는 합수
-async function loadComponent(id, url){
+async function loadComponent(id, url, imagePath = './'){
     try{
         const response = await fetch(url);
-        const data = await response.text();
-        document.getElementById(id).innerHTML = data;
+        if (!response.ok) throw new Error(`HTTP error! status: ${reponse.status}`);
+        
+        let data = await response.text();
+
+        data = data.replace(/src="img\//g, `src="${imagePath}img/`);
+        
+        const element = document.getElementById(id);
+        if(element) {
+            element.innerHTML = data;
+        }
 
     } catch(error){
         console.error(`컴포넌트 로드 실패 (${url}):`, error);
@@ -21,13 +29,14 @@ window.toggleModal = function(show){
 
 // 모든 컴포넌트 로드 후 설정
 async function initLayout(){
-   // 현재페이지가 메인화면인지 서브화면인지 여부에 따른 경로변경
-    const isSubPage = window.location.pathname.includes('mnu');
-    const basePath = isSubpage ? '../common/components/' : './common/components/'
+
+    const isSubPage = window.location.pathname.includes('/mnu');
+
+    const basePath = isSubPage ? '../' : './';
     
-    await loadComponent('header_component', `${basePath}header_template.html`);
-    await loadComponent('footer_component', `${basePath}footer-template.html`);
-    await loadComponent('modal_component', `${basePath}modal_template.html`);
+    await loadComponent('header_component', `${basePath}header_template.html`, basePath);
+    await loadComponent('footer_component', `${basePath}footer-template.html`, basePath);
+    await loadComponent('modal_component', `${basePath}modal_template.html`, basePath);
 
     // 헤더 로드 후 모바일 메뉴 이벤트 재연결 필요 
     // 헤더 스크롤 제어
@@ -91,7 +100,13 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', updateBodyPadding);
 }
 
-initLayout();
+if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initLayout);
+}else{
+    initLayout();    
+}
+
+
 
 
 
