@@ -21,9 +21,13 @@ window.toggleModal = function(show){
 
 // 모든 컴포넌트 로드 후 설정
 async function initLayout(){
-    await loadComponent('header_component', './common/components/header_template.html');
-    await loadComponent('footer_component', './common/components/footer-template.html');
-    await loadComponent('modal_component', './common/components/modal_template.html');
+   // 현재페이지가 메인화면인지 서브화면인지 여부에 따른 경로변경
+    const isSubPage = window.location.pathname.includes('mnu');
+    const basePath = isSubpage ? '../common/components/' : './common/components/'
+    
+    await loadComponent('header_component', `${basePath}header_template.html`);
+    await loadComponent('footer_component', `${basePath}footer-template.html`);
+    await loadComponent('modal_component', `${basePath}modal_template.html`);
 
     // 헤더 로드 후 모바일 메뉴 이벤트 재연결 필요 
     // 헤더 스크롤 제어
@@ -88,5 +92,6 @@ window.addEventListener('resize', updateBodyPadding);
 }
 
 initLayout();
+
 
 
