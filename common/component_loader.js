@@ -38,9 +38,9 @@ async function initLayout(){
 
     const basePath = isSubPage ? '../' : './';
     
-    await loadComponent('header_component', `${basePath}header_template.html`, basePath);
-    await loadComponent('footer_component', `${basePath}footer-template.html`, basePath);
-    await loadComponent('modal_component', `${basePath}modal_template.html`, basePath);
+    await loadComponent('header_component', `${basePath}common/components/header_template.html`, basePath);
+    await loadComponent('footer_component', `${basePath}common/components/footer-template.html`, basePath);
+    await loadComponent('modal_component', `${basePath}common/components/modal_template.html`, basePath);
 
     // 헤더 로드 후 모바일 메뉴 이벤트 재연결 필요 
     // 헤더 스크롤 제어
@@ -109,6 +109,7 @@ if (document.readyState === 'loading'){
 }else{
     initLayout();    
 }
+
 
 
 
