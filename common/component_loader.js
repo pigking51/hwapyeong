@@ -36,7 +36,7 @@ async function initLayout(){
 
     const isSubPage = window.location.pathname.includes('/mnu');
     const basePath = isSubPage ? '../' : './';
-    const componentsPath = `${basePath}common/components`;
+    const componentsPath = `${basePath}common/components/`;
     
     await loadComponent('header_component', `${componentsPath}header_template.html`, basePath);
     await loadComponent('footer_component', `${componentsPath}footer-template.html`, basePath);
@@ -110,6 +110,7 @@ if (document.readyState === 'loading'){
 }else{
     initLayout();    
 }
+
 
 
 
