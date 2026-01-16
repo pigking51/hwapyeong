@@ -35,12 +35,12 @@ window.toggleModal = function(show){
 async function initLayout(){
 
     const isSubPage = window.location.pathname.includes('/mnu');
-
     const basePath = isSubPage ? '../' : './';
+    const componentsPath = `${basePath}common/components`;
     
-    await loadComponent('header_component', `${basePath}common/components/header_template.html`, basePath);
-    await loadComponent('footer_component', `${basePath}common/components/footer-template.html`, basePath);
-    await loadComponent('modal_component', `${basePath}common/components/modal_template.html`, basePath);
+    await loadComponent('header_component', `${componentsPath}header_template.html`, basePath);
+    await loadComponent('footer_component', `${componentsPath}footer-template.html`, basePath);
+    await loadComponent('modal_component', `${componentsPath}modal_template.html`, basePath);
 
     // 헤더 로드 후 모바일 메뉴 이벤트 재연결 필요 
     // 헤더 스크롤 제어
@@ -104,11 +104,13 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', updateBodyPadding);
 }
 
+
 if (document.readyState === 'loading'){
     document.addEventListener('DOMContentLoaded', initLayout);
 }else{
     initLayout();    
 }
+
 
 
 
